@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Demo - MindBridge Mental Health Support</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="request-demo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <!-- [Client Note: Add logo image here] Logo should be 200x50px with text "MindBridge" -->
+                <a href="index.html"><img src="logo.png" alt="MindBridge Logo" class="logo-image"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="request-demo.html" class="active">Request Demo</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Demo Request Hero Section -->
+    <section class="hero demo-hero">
+        <div class="hero-content">
+            <h1>Request a Free Consultation</h1>
+            <p>Take the first step towards better mental well-being with a personalized demo of our services</p>
+        </div>
+    </section>
+
+    <!-- Main Form Section -->
+    <section class="demo-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-info">
+                    <h2>What to Expect</h2>
+                    <ul class="expectation-list">
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>30-Minute Session</h3>
+                                <p>Free consultation with our mental health professionals</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-comments"></i>
+                            <div>
+                                <h3>Needs Assessment</h3>
+                                <p>Discussion of your specific requirements and concerns</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clipboard-list"></i>
+                            <div>
+                                <h3>Personalized Plan</h3>
+                                <p>Tailored recommendations for your situation</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h3>Confidential</h3>
+                                <p>Your information is secure and private</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <form id="demo-request-form" class="demo-form" action="process_form.php" method="POST">
+                    <h2>Personal Information</h2>
+                    
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label for="firstName">First Name*</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="lastName">Last Name*</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <div class="input-group">
+                            <label for="university">University/Institution*</label>
+                            <input type="text" id="university" name="university" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <div class="input-group">
+                            <label for="studentStatus">Student Status*</label>
+                            <select id="studentStatus" name="studentStatus" required>
+                                <option value="">Select your status</option>
+                                <option value="undergraduate">Undergraduate</option>
+                                <option value="graduate">Graduate</option>
+                                <option value="phd">PhD</option>
+                                <option value="exchange">Exchange Student</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <h2>Your Interests</h2>
+                    
+                    <div class="form-group full-width">
+                        <div class="input-group">
+                            <label>Services of Interest (Select all that apply)</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services[]" value="individual">
+                                    Individual Counseling
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services[]" value="group">
+                                    Group Therapy
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services[]" value="crisis">
+                                    Crisis Support
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services[]" value="academic">
+                                    Academic Support
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <div class="input-group">
+                            <label for="message">Additional Information</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Please share any specific concerns or questions you have..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <div class="input-group">
+                            <label for="preferredTime">Preferred Consultation Time</label>
+                            <select id="preferredTime" name="preferredTime">
+                                <option value="">Select preferred time</option>
+                                <option value="morning">Morning (9AM - 12PM)</option>
+                                <option value="afternoon">Afternoon (12PM - 5PM)</option>
+                                <option value="evening">Evening (5PM - 8PM)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <div class="input-group">
+                            <label class="checkbox-label privacy-label">
+                                <input type="checkbox" name="privacy" required>
+                                I agree to the privacy policy and terms of service*
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="submit-btn">
+                            <span>Schedule Consultation</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="demo-faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Is the consultation really free?</h3>
+                    <p>Yes, your initial 30-minute consultation is completely free with no obligations.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How should I prepare?</h3>
+                    <p>Just come as you are. Have your questions ready and be prepared to discuss your needs.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What happens after the consultation?</h3>
+                    <p>You'll receive a personalized plan and recommendations for next steps, with no pressure to commit.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I change my appointment?</h3>
+                    <p>Yes, you can reschedule your consultation up to 24 hours before the scheduled time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MindBridge</h3>
+                <p>Supporting international students' mental well-being through accessible and culturally sensitive care.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@mindbridge.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MindBridge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,619 @@
+/* About Hero Section */
+.about-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 8rem 5% 4rem;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.about-hero p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Mission Section */
+.mission-section {
+    padding: 5rem 5%;
+    background: var(--white);
+}
+
+.mission-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.mission-text {
+    animation: fadeIn 1s ease-out;
+}
+
+.mission-text h2 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.mission-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.mission-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--light-gray);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.mission-image {
+    background: var(--light-gray);
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+}
+
+/* Values Section */
+.values-section {
+    padding: 5rem 5%;
+    background: var(--light-gray);
+}
+
+.values-section h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.value-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.value-card p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+    padding: 5rem 5%;
+    background: var(--white);
+}
+
+.team-section h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.team-member {
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.member-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    background: var(--light-gray);
+    overflow: hidden;
+}
+
+.team-member h3 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-member .role {
+    display: block;
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.team-member p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Impact Section */
+.impact-section {
+    padding: 5rem 5%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+}
+
+.impact-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.impact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.impact-story {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.impact-story blockquote {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.impact-story cite {
+    display: block;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.impact-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.metric {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.metric-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Awards Section */
+.awards-section {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.award-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+}
+
+.award-icon {
+    font-size: 2.5rem;
+    color: #4a90e2;
+    margin-bottom: 1rem;
+}
+
+.award-org {
+    color: #666;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.award-year {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.award-desc {
+    margin-top: 1rem;
+    color: #555;
+}
+
+.media-coverage {
+    margin-top: 4rem;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.media-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.media-source {
+    font-weight: 600;
+    color: #333;
+    margin-left: 0.5rem;
+}
+
+/* Approach Section */
+.approach-section {
+    padding: 4rem 0;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.approach-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.approach-card i {
+    font-size: 2.5rem;
+    color: #4a90e2;
+    margin-bottom: 1rem;
+}
+
+.approach-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.approach-list li {
+    padding: 0.5rem 0;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.approach-list li:before {
+    content: "•";
+    color: #4a90e2;
+    position: absolute;
+    left: 0;
+}
+
+/* Vision Section */
+.vision-section {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.vision-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: #555;
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.vision-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.vision-card i {
+    font-size: 2.5rem;
+    color: #4a90e2;
+    margin-bottom: 1rem;
+}
+
+.vision-list {
+    list-style: none;
+    padding: 0;
+}
+
+.vision-list li {
+    margin: 1.5rem 0;
+}
+
+.initiative-name {
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Partnerships Section */
+.partnerships-section {
+    padding: 4rem 0;
+}
+
+.partnerships-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: #555;
+}
+
+.partnerships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.partnership-category {
+    margin-bottom: 2rem;
+}
+
+.partner-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.partner-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.partner-item i {
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-bottom: 1rem;
+}
+
+.partner-item h4 {
+    margin: 1rem 0;
+    color: #333;
+}
+
+.partner-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.partner-item ul li {
+    color: #555;
+    padding: 0.3rem 0;
+}
+
+.partnership-cta {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 3rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #357abd;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .mission-content {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-stats {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-hero p {
+        font-size: 1.2rem;
+    }
+
+    .mission-text h2,
+    .values-section h2,
+    .team-section h2,
+    .impact-section h2 {
+        font-size: 2rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .team-grid {
+        gap: 2rem;
+    }
+
+    .member-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .impact-story {
+        padding: 1.5rem;
+    }
+
+    .metric {
+        padding: 1.5rem;
+    }
+
+    .awards-grid,
+    .approach-grid,
+    .vision-grid,
+    .partnerships-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .award-card,
+    .approach-card,
+    .vision-card,
+    .partner-item {
+        padding: 1.5rem;
+    }
+
+    .partnership-cta {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Animations */
+.award-card,
+.media-item,
+.approach-card,
+.vision-card,
+.partner-item {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.award-card:nth-child(2),
+.media-item:nth-child(2),
+.approach-card:nth-child(2),
+.vision-card:nth-child(2),
+.partner-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.award-card:nth-child(3),
+.media-item:nth-child(3),
+.approach-card:nth-child(3),
+.vision-card:nth-child(3),
+.partner-item:nth-child(3) {
+    animation-delay: 0.4s;
+} 
