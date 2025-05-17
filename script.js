@@ -90,4 +90,72 @@ function setActiveNavItem() {
 // Initialize functions
 document.addEventListener('DOMContentLoaded', () => {
     setActiveNavItem();
-}); 
+});
+
+// Handle quiz form submission
+document.getElementById('mental-health-quiz').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    formData.append('form_type', 'quiz');
+
+    fetch('process_forms.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Show quiz results
+            document.getElementById('quiz-result').style.display = 'block';
+            document.getElementById('score-number').textContent = data.score;
+            
+            // Set result message based on score
+            let message = '';
+            if (data.score <= 4) {
+                message = 'Your mental well-being appears to be in good shape. Keep up the good work!';
+            } else if (data.score <= 8) {
+                message = 'You might be experiencing some stress. Consider reaching out for support.';
+            } else {
+                message = 'You may be experiencing significant stress. We recommend speaking with a counselor.';
+            }
+            document.getElementById('result-message').textContent = message;
+        } else {
+            alert('Error submitting quiz: ' + data.message);
+        }
+    })
+    .catch(error => {
+        alert('An error occurred while submitting the quiz.');
+    });
+});
+
+// Handle demo request form submission
+document.getElementById('demo-request-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    formData.append('form_type', 'demo');
+
+    fetch('process_forms.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Thank you for your interest! We will contact you shortly to schedule your consultation.');
+            this.reset();
+        } else {
+            alert('Error submitting request: ' + data.message);
+        }
+    })
+    .catch(error => {
+        alert('An error occurred while submitting your request.');
+    });
+});
+
+// Function to reset quiz
+function resetQuiz() {
+    document.getElementById('mental-health-quiz').reset();
+    document.getElementById('quiz-result').style.display = 'none';
+} 
